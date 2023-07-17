@@ -1,6 +1,27 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: local("Fraunces"), url(./fonts/Fraunces_9pt-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --clr-cyan-dark: hsl(158, 36%, 37%);
-  --clr-cyan-light: hsl(159, 74%, 15%);
+  --clr-cyan-darker: hsl(159, 74%, 15%);
   --clr-cream: hsl(30, 38%, 92%);
   --clr-blue-dark: hsl(212, 21%, 14%);
   --clr-gray-dark: hsl(228, 12%, 48%);
@@ -86,13 +107,13 @@ p {
   font-weight: var(--fw-bold);
 
   cursor: pointer;
-	box-shadow:  7px 7px 15px -19px rgba(0, 0, 0, 0.46);
-	-webkit-box-shadow:  7px 7px 15px -19px rgba(0, 0, 0, 0.46);
+  box-shadow: 7px 7px 15px -19px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 7px 7px 15px -19px rgba(0, 0, 0, 0.46);
 }
 
 .button:focus,
 .button:hover {
-  background-color: var(--clr-cyan-light);
+  background-color: var(--clr-cyan-darker);
 }
 
 .icon {
@@ -106,8 +127,8 @@ p {
   background-color: var(--clr-white);
   overflow: hidden;
 
-	box-shadow:  7px 7px 15px -19px rgba(0, 0, 0, 0.46);
-	-webkit-box-shadow:  7px 7px 15px -19px rgba(0, 0, 0, 0.46);
+  box-shadow: 7px 7px 15px -19px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 7px 7px 15px -19px rgba(0, 0, 0, 0.46);
 }
 
 .card > * {
@@ -191,6 +212,6 @@ p {
 }
 
 .attribution a {
-  color: var(--clr-cyan-dark);
+  color: var(--clr-cyan-darker);
   text-decoration: none;
 }
