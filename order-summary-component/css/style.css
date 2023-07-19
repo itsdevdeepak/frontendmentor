@@ -1,0 +1,240 @@
+@font-face {
+	font-family: "Red Hat Display";
+	src: local("Red Hat Display"), url(../fonts/RedHatDisplay-Medium.ttf);
+	font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	src: local("Red Hat Display"), url(../fonts/RedHatDisplay-Bold.ttf);
+	font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	src: local("Red Hat Display"), url(../fonts/RedHatDisplay-Black.ttf);
+	font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-offwhite: hsl(225, 100%, 98%);
+	--clr-blue-lighter: hsl(225, 100%, 94%);
+	--clr-blue-light: hsl(224, 23%, 45%);
+	--clr-blue: hsl(245, 75%, 52%);
+	--clr-blue-darker: hsl(223, 47%, 23%);
+
+	--clr-accent: var(--clr-blue);
+	--clr-primary: var(--clr-blue-darker);
+	--clr-secondary: var(--clr-blue-light);
+
+	--ff-primary: "Red Hat Display", sans-serif;
+	--fw-normal: 500;
+	--fw-medium: 700;
+	--fw-bold: 900;
+
+	--fs-normal: 1rem;
+	--fs-large: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-normal);
+  background-color: var(--clr-blue-lighter);
+  color: var(--clr-primary);
+}
+
+p {
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Layout Styles */
+
+.l-main {
+  min-height: 100vh;
+}
+
+.l-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55%;
+  z-index: -1;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.l-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-constraint {
+  max-width: 430px;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .l-main::before {
+    background-image: url(../images/pattern-background-mobile.svg);
+  }
+
+  .l-constraint {
+    max-width: 380px;
+  }
+}
+
+/* Modules */
+
+.heading {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 1.2em 1.7em;
+  font-weight: var(--fw-medium);
+  border-radius: 10px;
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  box-shadow: 0px 13px 27px -5px rgba(170, 170, 189, 0.966);
+}
+
+.button:focus,
+.button:hover {
+  opacity: 0.8;
+}
+
+.link {
+  padding: 0.5rem;
+  font-weight: var(--fw-medium);
+  background-color: transparent;
+}
+
+.link-primary {
+  text-decoration: underline;
+  color: var(--clr-accent);
+}
+
+.link-primary:focus, 
+.link-primary:hover {
+  opacity: 0.8;
+}
+
+.link-secondary {
+  text-decoration: none;
+  color: var(--clr-secondary);
+}
+
+.link-secondary:focus,
+.link-secondary:hover {
+  color: var(--clr-primary);
+}
+
+/* Card */
+
+.card {
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--clr-white);
+  box-shadow: 0px 13px 27px -5px rgba(186, 186, 194, 0.966);
+}
+
+.card_body {
+  padding: 2rem 2.5rem;
+  background: #fff;
+}
+
+.card_body > * {
+  margin: 0;
+}
+
+.card_body > *:not(:first-child) {
+   margin-top: 1.5rem;
+ }
+
+.card_body > p {
+  color: var(--clr-secondary);
+}
+
+@media screen and (max-width: 800px) {
+  .card_body {
+    padding: 1.5rem;
+  }
+}
+
+/* Order Summary Card */
+
+.orderSummary > *:not(.pricePlan) {
+  text-align: center;
+}
+
+.orderSummary h3,
+.orderSummary p  {
+  margin: 0;
+}
+
+/* Price plan card */
+
+.pricePlan {
+  display: flex;
+  align-items: center;
+  padding: 1.3em 1.5rem;
+  border-radius: 10px;
+  background: var(--clr-offwhite);
+}
+
+.pricePlan > .icon {
+  min-width: 50px;
+  margin-right: 1em;
+}
+
+.pricePlan .pricePlan_info > p {
+  color: var(--clr-secondary);
+}
+
+.pricePlan .link {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .pricePlan {
+    padding: 1.3em 1em;
+  }
+}
+
+/* Footer */
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
