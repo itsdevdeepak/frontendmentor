@@ -2,8 +2,7 @@
   <br>
   <img src="https://asset.brandfetch.io/id-7PJzcYu/idDksQWGNy.jpeg" style="border-radius:50%" alt="Markdownify" width="170">
   <br>
-  <br>
-  Frontend Mentor | Order summary card | HTML, CSS 
+  Frontend Mentor | Order summary Component [ HTML, CSS ] 
   <br>
 </h1>
 
@@ -33,8 +32,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [here](https://your-solution-url.com)
-- Live Site URL: [here](itsdevdeepak.github.io/frontendmentor/order-summary-component)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/order-summary-component-html-css-MNwYwPUoFM)
+- Live Site URL: [here](https://itsdevdeepak.github.io/frontendmentor/order-summary-component)
 
 ## Built with
 - Semantic HTML5 markup
@@ -47,3 +46,10 @@ Users should be able to:
 - Website - [itsdevdeepak.me](https://itsdevdeepak.me)
 - Frontend Mentor - [@itsdevdeepak](https://www.frontendmentor.io/profile/itsdevdeepak)
 - Twitter - [@itsdevdeepak](https://www.twitter.com/itsdevdeepak)
+
+## Lighthouse Score
+
+<details>
+    <summary>Toggle Switch</summary>
+    <img src="./images/lighthouse.png">
+</details>
