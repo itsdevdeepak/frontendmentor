@@ -1,0 +1,16 @@
+footer {
+  background-color: var(--clr-secondary);
+  color: var(--clr-white);
+  padding: 1rem;
+}
+
+.attribution {
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}

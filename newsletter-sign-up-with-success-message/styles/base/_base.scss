@@ -1,0 +1,78 @@
+@use "../variables" as *;
+
+:root {
+  // Colors
+  --clr-orange: hsl(14.6, 100%, 61.4%);
+  --clr-accent: hsl(4, 100%, 67%);
+  --clr-primary: hsl(234, 29%, 20%);
+  --clr-secondary: hsl(235, 18%, 26%);
+  --clr-error: hsl(352, 79%, 59%);
+  --clr-error-bg: hsla(352, 78%, 53%, 0.15);
+  --clr-gray: hsl(231, 7%, 60%);
+  --clr-pink: hsl(345.7, 79.1%, 60.6%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  // Gradients
+  --gradient-primary: linear-gradient(90deg, var(--clr-pink) 0%, var(--clr-orange)  100%);
+
+  // Fonts
+  --ff-primary: "Roboto", sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fs-small: 0.875rem;
+  --fs-normal: 1rem;
+  --fs-large: 2.8rem;
+
+  // Sizes (margin, padding)
+  --size-xsmall: 0.5rem;
+  --size-small: 0.75rem;
+  --size-medium: 0.875rem;
+  --size-large: 1.3rem;
+  --size-xlarge: 1.45rem;
+  
+  @media (min-width: $desktop-min) {
+    --fs-large: 3.2rem;
+    --size-large: 1.45rem;
+    --size-xlarge: 1.55rem;
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+input, button {
+  font: inherit;
+}
+
+p, h1, h2, h3 {
+  margin-block: var(--size-large);
+}
+
+p {
+  margin-block: var(--size-medium);
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-normal);
+  color: var(--clr-secondary);
+  line-height: 1.5;
+}

@@ -1,0 +1,40 @@
+
+.form {
+  margin-top: calc(var(--size-xlarge) + 0.8rem);
+}
+
+.labelAndErrorContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+}
+
+.errorMsg {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--clr-error);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-top: var(--size-xsmall); // for label
+  margin-bottom: var(--size-small);
+  padding: var(--size-medium);
+  border-radius: 8px;
+  border: 1px solid var(--clr-gray);
+
+  &.invalid {
+    color: var(--clr-error);
+    outline: 1px solid var(--clr-error);
+    background-color: var(--clr-error-bg);
+  }
+
+  &:focus {
+    outline: 1px solid var(--clr-primary);
+  }
+}

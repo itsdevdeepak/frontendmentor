@@ -1,0 +1,17 @@
+
+@use "../variables" as *;
+
+.l-constraint {
+  max-width: 900px;
+}
+
+.l-newsletter {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--clr-secondary);
+  
+  @media (min-width: $tablet-min) {
+    align-items: center;
+    justify-content: center;
+  }
+}

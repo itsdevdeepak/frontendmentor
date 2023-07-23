@@ -1,0 +1,27 @@
+.list {
+  --marker-size: 21px;
+  padding: 0;
+
+  > * {
+    position: relative;
+    padding-left: calc(var(--marker-size) +  1.2rem);
+    list-style: none;
+    
+    &:not(:first-child) {
+      margin-top: var(--size-medium);
+    }
+  }
+
+  > *::before {
+    content: "";
+    position: absolute;
+    width: var(--marker-size);
+    aspect-ratio: 1/1;
+    top: 0;
+    left:  0;
+    background-image: url("../../assets/images/icon-list.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--marker-size);
+  }
+}

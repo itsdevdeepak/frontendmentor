@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="Solution of frontendmentor news signup form with success message component challenge"
+  />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <section aria-label="Sign up for newsletter" class="l-newsletter" >
+        <article id="newsletterForm" class="newsletterForm card">
+          <header class="card_header">
+            <picture>
+              <source
+                media="(min-width:900px)"
+                srcset="./assets/images/illustration-sign-up-desktop.svg"
+              />
+              <img
+                src="./assets/images/illustration-sign-up-mobile.svg"
+                alt="illustration of different devices and graphs"
+              />
+            </picture>
+          </header>
+          <div class="card_body">
+            <h2 class="heading">
+              Stay updated!
+            </h2>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+            <form class="form" action="#" novalidate>
+              <div class="labelAndErrorContainer">
+                <label class="label" for="email">Email address</label> <span id="emailErrorMsg" class="errorMsg" aria-live="assertive" role="status" aria-hidden="true"></span> <!-- only reachable through input(aria-describedby) for screen readers -->
+              </div>
+              <input class="input" type="email" id="email" name="email" placeholder="email@company.com"  aria-describedby="emailErrorMsg" aria-required="true" autocomplete="true">
+              <button class="button" type="submit">Subscribe to monthly newsletter</button>
+            </form>
+          </div>
+        </article>
+        <article id="newsletterThanksMsg" class="newsletterThanksMsg card is-hidden">
+            <div class="image_container">
+              <img class="card_image" src="./assets/images/icon-success.svg" alt="">
+            </div>
+            <h2 class="heading">Thanks for subscribing!</h2>
+            <p>A confirmation email has been sent to
+              <b><span id="subscriberEmail">You should not see this</span></b>. Please open it and click the button inside to confirm
+              your subscription. Dismiss message</p>
+              <button class="button">Dismiss message</button>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?e=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://linkfree.io/itsdevdeepak">Deepak</a>.
+      </div>
+    </footer>
+    <script type="module" src="./js/newsletter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.button {
+  width: 100%;
+  padding: 0.875em 1.3em;
+  margin-block: var(--size-medium);
+  font-weight: var(--fw-bold);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+  
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background: var(--gradient-primary);
+    box-shadow: var(--clr-pink) 0px 10px 35px -2px;
+  }
+}

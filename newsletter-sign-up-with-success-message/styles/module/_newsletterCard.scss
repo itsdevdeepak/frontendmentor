@@ -1,0 +1,57 @@
+@use "../variables" as *;
+
+.newsletterForm,
+.newsletterThanksMsg {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+
+  @media (max-width: $mobile-max) {
+    padding: 0; // now only card_body has padding
+    border-radius: 0;
+  }
+}
+
+// Form
+
+@media (min-width: $tablet-max) and (min-width: $desktop-min) {
+  .newsletterForm {
+    gap: 2rem;
+    flex-direction: row-reverse;
+  }
+}
+
+// Thanks  Msg
+
+.newsletterThanksMsg {
+  padding: var(--size-xlarge);
+}
+
+@media (min-width: $tablet-min) {
+  .newsletterThanksMsg {
+    .image_container {
+      max-width: 50px;
+    }
+
+    p,
+    .heading {
+      max-width: 350px;
+    }
+  }
+}
+
+// Align image to the top and button to the bottom.
+@media (max-width: $mobile-max) {
+  .newsletterThanksMsg {
+    flex: 1;
+
+    .image_container {
+      margin-block: var(--size-xlarge);
+    }
+
+    .button,
+    .image_container {
+      margin-top: auto;
+    }
+  }
+}

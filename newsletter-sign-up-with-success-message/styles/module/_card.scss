@@ -1,0 +1,14 @@
+.card {
+  padding: var(--size-xlarge);
+  border-radius: 20px;
+  background-color: var(--clr-white);
+  box-shadow: var(--clr-primary) 0px 10px 35px -2px;
+}
+
+.card_body {
+  padding: var(--size-xlarge);
+}
+
+.card_header img {
+  width: 100%;
+}
