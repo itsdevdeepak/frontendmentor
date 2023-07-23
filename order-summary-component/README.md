@@ -17,6 +17,10 @@
 
 ![](./design/desktop-preview.jpg)
 
+<details>
+    <summary><b>Lighthouse Score</b></summary>
+    <img src="./images/lighthouse.png">
+</details>
 
 ## Overview
 
@@ -46,10 +50,3 @@ Users should be able to:
 - Website - [itsdevdeepak.me](https://itsdevdeepak.me)
 - Frontend Mentor - [@itsdevdeepak](https://www.frontendmentor.io/profile/itsdevdeepak)
 - Twitter - [@itsdevdeepak](https://www.twitter.com/itsdevdeepak)
-
-## Lighthouse Score
-
-<details>
-    <summary>Toggle Switch</summary>
-    <img src="./images/lighthouse.png">
-</details>
