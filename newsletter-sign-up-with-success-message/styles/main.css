@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto"), url(../../assets/fonts/Roboto-Regular.ttf);
+  src: local("Roboto"), url(../assets/fonts/Roboto-Regular.ttf);
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto"), url(../../assets/fonts/Roboto-Bold.ttf);
+  src: local("Roboto"), url(../assets/fonts/Roboto-Bold.ttf);
   font-weight: 700;
   font-display: swap;
 }
@@ -157,7 +157,7 @@ footer {
   aspect-ratio: 1/1;
   top: 0;
   left: 0;
-  background-image: url("../../assets/images/icon-list.svg");
+  background-image: url("../assets/images/icon-list.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: var(--marker-size);

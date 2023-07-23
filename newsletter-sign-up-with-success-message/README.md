@@ -61,3 +61,10 @@ Users should be able to:
 - Website - [itsdevdeepak.me](https://itsdevdeepak.me)
 - Frontend Mentor - [@itsdevdeepak](https://www.frontendmentor.io/profile/itsdevdeepak)
 - Twitter - [@itsdevdeepak](https://www.twitter.com/itsdevdeepak)
+
+## Lighthouse Score
+
+<details>
+    <summary>Toggle Switch</summary>
+    <img src="./assets/images/lighthouse.png">
+</details>
