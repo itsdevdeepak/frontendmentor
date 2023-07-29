@@ -13,7 +13,7 @@
   margin: 0.4rem;
   background-size: 100%;
   background-repeat: no-repeat; 
-  background-image: url("../../images/icon-arrow-down.svg");
+  background-image: url("../images/icon-arrow-down.svg");
 }
 
 .dropdown_button:hover::after {
@@ -21,7 +21,7 @@
 }
 
 .dropdown_button[aria-expanded="true"]::after {
-  background-image: url("../../images/icon-arrow-up.svg");
+  background-image: url("../images/icon-arrow-up.svg");
 }
 
 .dropdown_menu {
