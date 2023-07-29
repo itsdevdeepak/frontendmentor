@@ -1,0 +1,37 @@
+@use "../variables" as *;
+
+.hero {
+  @media (min-width: $desktop-min) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hero_image {
+  flex: 0 1 37%;
+}
+
+.hero_content {
+  flex: 0 1 46%;
+  padding: var(--size-medium);
+
+  > * {
+    margin: 0;
+    margin-top: var(--size-large);
+  }
+
+  p {
+    max-width: 480px;
+  }
+
+  @media (max-width: $mobile-max) {
+    text-align: center;
+
+    p {
+      margin-inline: auto;
+    }
+  }
+
+}

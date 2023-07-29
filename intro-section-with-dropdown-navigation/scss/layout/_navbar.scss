@@ -1,0 +1,105 @@
+@use "../variables" as *;
+
+.navbar {
+  padding: 1.7rem;
+  gap: 3rem;
+
+  @media (min-width: $desktop-min) {
+    padding: 2rem;
+  }
+}
+
+.logo img {
+  min-width: 80px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hamburger {
+  position: fixed;
+  right: 20px;
+  display: none;
+  border: none;
+  background-color: transparent;
+  z-index: 100;
+  cursor: pointer;
+
+  @media (max-width: $desktop-min) {
+    display: block;
+  }
+}
+
+
+
+.navigation {
+  flex: 1;
+
+  @media (max-width: $desktop-min) {
+    flex-direction: column;
+    width: min(100%, 320px);
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    height: 100%;
+    padding: var(--size-large);
+    padding-top: 7rem;
+    background-color: white;
+    box-shadow: 0px 0 200px 0px black;
+
+    &:not(.no-js) {
+      display: none;
+    }
+
+    > ul {
+      flex-direction: column;
+      gap: var(--size-medium);
+    }
+  }
+}
+
+// Use focus based navigation if js is disable
+.hamburger.no-js:focus + .navigation.no-js,
+.hamburger.no-js + .navigation.no-js:focus-within {
+  top: 0;
+  right: 0;
+}
+
+.hamburger[aria-expanded=true] + .navigation {
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.navigation_account {
+  .navigation_link {
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-min) {
+    margin-left: auto;
+  }
+}
+
+.navigation_link {
+  display: block;
+  padding: var(--size-small) var(--size-medium);
+  font-size: var(--fs-small);
+  color: var(--clr-secondary);
+
+  .icon {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: var(--size-medium);
+  }
+}
+
+.navigation_link:hover {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.navigation_link-alt {
+  border-radius: 12px;
+  border: 2px solid var(--clr-secondary);
+}

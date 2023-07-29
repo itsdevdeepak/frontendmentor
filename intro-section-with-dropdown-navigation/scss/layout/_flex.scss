@@ -1,0 +1,9 @@
+.l-flex {
+  display: flex;
+  gap: 2rem
+}
+
+.l-flex-equalySpaced {
+  justify-content: space-between;
+  align-items: center;
+}

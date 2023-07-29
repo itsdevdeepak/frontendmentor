@@ -1,0 +1,16 @@
+.button {
+  padding: 0.7em 1.5em;
+  font-weight: var(--fw-bold);
+  border-radius: 12px;
+  font-size: var(--fs-normal);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--clr-primary);
+    outline: 2px solid var(--clr-primary);
+  }
+}

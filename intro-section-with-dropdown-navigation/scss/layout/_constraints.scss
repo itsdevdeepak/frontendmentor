@@ -1,0 +1,9 @@
+@use "../variables" as *;
+
+.l-constraint {
+	@media (min-width: $desktop-min) {
+		max-width: 78rem;
+		padding: 2rem 1.7rem;
+		margin-inline: auto;
+	}
+}

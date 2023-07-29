@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "Epilogue";
+  src: local("Epilogue"), url(../font/Epilogue-Medium.ttf);
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Epilogue";
+  src: local("Epilogue"), url(../font/Epilogue-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --clr-white: hsl(0, 0%, 98%);
+  --clr-gray: hsl(0, 0%, 41%);
+  --clr-black: hsl(0, 0%, 8%);
+  --clr-primary: var(--clr-black);
+  --clr-secondary: var(--clr-gray);
+  --ff-primary: "Epilogue", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fs-xsmall: 0.9rem;
+  --fs-small: 1rem;
+  --fs-normal: 1.125rem;
+  --fs-medium: 1.375rem;
+  --fs-large: 2.1rem;
+  --size-small: 0.6rem;
+  --size-medium: 0.75rem;
+  --size-large: 1.5rem;
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-large: 4.92rem;
+    --size-large: 4rem;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+button, a {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: 11;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 90vh;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: 1.5;
+  background-color: var(--clr-white);
+  color: var(--clr-secondary);
+}
+
+@media (min-width: 800px) {
+  .l-constraint {
+    max-width: 78rem;
+    padding: 2rem 1.7rem;
+    margin-inline: auto;
+  }
+}
+
+.l-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.l-flex-equalySpaced {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  padding: 1.7rem;
+  gap: 3rem;
+}
+@media (min-width: 800px) {
+  .navbar {
+    padding: 2rem;
+  }
+}
+
+.logo img {
+  min-width: 80px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hamburger {
+  position: fixed;
+  right: 20px;
+  display: none;
+  border: none;
+  background-color: transparent;
+  z-index: 100;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+.navigation {
+  flex: 1;
+}
+@media (max-width: 800px) {
+  .navigation {
+    flex-direction: column;
+    width: min(100%, 320px);
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    height: 100%;
+    padding: var(--size-large);
+    padding-top: 7rem;
+    background-color: white;
+    box-shadow: 0px 0 200px 0px black;
+  }
+  .navigation:not(.no-js) {
+    display: none;
+  }
+  .navigation > ul {
+    flex-direction: column;
+    gap: var(--size-medium);
+  }
+}
+
+.hamburger.no-js:focus + .navigation.no-js,
+.hamburger.no-js + .navigation.no-js:focus-within {
+  top: 0;
+  right: 0;
+}
+
+.hamburger[aria-expanded=true] + .navigation {
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.navigation_account .navigation_link, .navigation_account .dropdown_button {
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .navigation_account {
+    margin-left: auto;
+  }
+}
+
+.navigation_link, .dropdown_button {
+  display: block;
+  padding: var(--size-small) var(--size-medium);
+  font-size: var(--fs-small);
+  color: var(--clr-secondary);
+}
+.navigation_link .icon, .dropdown_button .icon {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: var(--size-medium);
+}
+
+.navigation_link:hover, .dropdown_button:hover {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.navigation_link-alt {
+  border-radius: 12px;
+  border: 2px solid var(--clr-secondary);
+}
+
+@media (min-width: 800px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hero_image {
+  flex: 0 1 37%;
+}
+
+.hero_content {
+  flex: 0 1 46%;
+  padding: var(--size-medium);
+}
+.hero_content > * {
+  margin: 0;
+  margin-top: var(--size-large);
+}
+.hero_content p {
+  max-width: 480px;
+}
+@media (max-width: 800px) {
+  .hero_content {
+    text-align: center;
+  }
+  .hero_content p {
+    margin-inline: auto;
+  }
+}
+
+.button {
+  padding: 0.7em 1.5em;
+  font-weight: var(--fw-bold);
+  border-radius: 12px;
+  font-size: var(--fs-normal);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+.button:hover, .button:focus {
+  background-color: transparent;
+  color: var(--clr-primary);
+  outline: 2px solid var(--clr-primary);
+}
+
+.skiplink {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  padding: var(--size-small) var(--size-medium);
+  z-index: 100;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+  border-radius: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.skiplink:focus {
+  top: 15px;
+  left: 15px;
+}
+
+.heading {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  line-height: 1;
+}
+
+.dropdown_button::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  aspect-ratio: 1;
+  margin: 0.4rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../../images/icon-arrow-down.svg");
+}
+
+.dropdown_button:hover::after {
+  filter: brightness(40%);
+}
+
+.dropdown_button[aria-expanded=true]::after {
+  background-image: url("../../images/icon-arrow-up.svg");
+}
+
+.dropdown_menu {
+  display: none;
+  padding-left: 1.1rem;
+}
+@media (min-width: 800px) {
+  .dropdown_menu {
+    padding: 0.8rem 0;
+    position: absolute;
+    font-size: var(--fs-xsmall);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px 0 hsl(0, 0%, 85%);
+  }
+  .dropdown_menu .navigation_link, .dropdown_menu .dropdown_button {
+    padding: 0.35rem 1.5rem;
+  }
+}
+
+.dropdown.no-js:focus-within > .dropdown_menu,
+.dropdown.no-js > .dropdown_menu:focus {
+  display: block;
+}
+
+.dropdown_button[aria-expanded=true] + .dropdown_menu {
+  display: block;
+}
+
+footer {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.attribution {
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.is-visuallyHidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/*# sourceMappingURL=index.css.map */

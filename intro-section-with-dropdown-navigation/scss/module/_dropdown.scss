@@ -1,0 +1,53 @@
+@use "../variables" as *;
+@use "../layout/navbar";
+
+.dropdown_button {
+  @extend .navigation_link;
+}
+
+.dropdown_button::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  aspect-ratio: 1;
+  margin: 0.4rem;
+  background-size: 100%;
+  background-repeat: no-repeat; 
+  background-image: url("../../images/icon-arrow-down.svg");
+}
+
+.dropdown_button:hover::after {
+  filter: brightness(40%);
+}
+
+.dropdown_button[aria-expanded="true"]::after {
+  background-image: url("../../images/icon-arrow-up.svg");
+}
+
+.dropdown_menu {
+  display: none;
+  padding-left: 1.1rem;
+  
+  @media (min-width: $desktop-min) {
+    padding: 0.8rem 0;
+    position: absolute;
+    font-size: var(--fs-xsmall);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px 0 hsl(0, 0%, 85%);
+
+    .navigation_link {
+      padding: 0.35rem 1.5rem;
+    }
+  }
+}
+
+// Use focus based dropdown if js is disable
+.dropdown.no-js:focus-within > .dropdown_menu,
+.dropdown.no-js > .dropdown_menu:focus {
+  display: block;
+}
+
+.dropdown_button[aria-expanded="true"] + .dropdown_menu {
+  display: block;
+}

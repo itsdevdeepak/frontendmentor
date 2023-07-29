@@ -1,0 +1,20 @@
+@use "./button";
+
+.skiplink {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  padding: var(--size-small) var(--size-medium);
+  z-index: 100;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+  border-radius: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.skiplink:focus  {
+  top: 15px;
+  left: 15px;
+}

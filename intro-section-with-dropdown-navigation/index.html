@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solution of frontendmentors intro section with dropdown menu challenge."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <a class="skiplink" href="#main">Skip to main</a>
+
+    <header class="navbar l-flex">
+      <a href="#" class="logo" aria-current="page"
+        ><img src="./images/logo.svg" alt="snap Logo"
+      /></a>
+      <button class="hamburger no-js">
+        <span class="is-visuallyHidden">Menu</span>
+        <img src="./images/icon-menu.svg" alt="" />
+      </button>
+      <nav class="navigation l-flex no-js">
+        <ul class="l-flex">
+          <li class="dropdown no-js">
+            <a href="#" class="dropdown_button">Features</a>
+            <ul class="dropdown_menu">
+              <li>
+                <a class="navigation_link" href="#"
+                  ><span class="icon"
+                    ><img src="./images/icon-todo.svg" alt="" /></span
+                  >Todo List</a
+                >
+              </li>
+              <li>
+                <a class="navigation_link" href="#"
+                  ><span class="icon"
+                    ><img src="./images/icon-calendar.svg" alt="" /></span
+                  >Calendar</a
+                >
+              </li>
+              <li>
+                <a class="navigation_link" href="#"
+                  ><span class="icon"
+                    ><img src="./images/icon-reminders.svg" alt="" /></span
+                  >Reminders</a
+                >
+              </li>
+              <li>
+                <a class="navigation_link" href="#"
+                  ><span class="icon"
+                    ><img src="./images/icon-planning.svg" alt="" /></span
+                  >Planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown no-js">
+            <a href="#" class="dropdown_button">Company</a>
+            <ul class="dropdown_menu">
+              <li><a class="navigation_link" href="#">History</a></li>
+              <li><a class="navigation_link" href="#">Our Team</a></li>
+              <li><a class="navigation_link" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="navigation_link" href="#">Careers</a>
+          </li>
+          <li>
+            <a class="navigation_link" href="#">About</a>
+          </li>
+        </ul>
+        <ul class="navigation_account l-flex">
+          <li><a class="navigation_link" href="#">Login</a></li>
+          <li>
+            <a class="navigation_link navigation_link-alt" href="#">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero l-constraint" aria-labelledby="introHeading">
+        <picture class="hero_image">
+          <source
+            media="(min-width: 800px)"
+            srcset="./images/image-hero-desktop.png"
+          />
+          <img
+            src="./images/image-hero-mobile.png"
+            alt="image of a young men holding laptop in a standing position"
+          />
+        </picture>
+        <div class="hero_content">
+          <h1 id="introHeading" class="heading">Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="button">Learn more</button>
+          <ul
+            class="usedby l-flex l-flex-equalySpaced"
+            aria-label="past clients"
+          >
+            <!-- TODO: msg me if you know the answer:  not sure about this section should i not announce it to screen reader ? -->
+            <li><img src="./images/client-databiz.svg" alt="databiz" /></li>
+            <li>
+              <img src="./images/client-audiophile.svg" alt="audiophile" />
+            </li>
+            <li><img src="./images/client-meet.svg" alt="meet" /></li>
+            <li><img src="./images/client-maker.svg" alt="maker" /></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://linkfree.io/itsdevdeepak">Deepak</a>.
+      </div>
+    </footer>
+    <!-- Replaces non js supported component with supported component (example focus/hover state button with click state) -->
+    <script type="module" src="./js/addJsSupport.js"></script> 
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
