@@ -67,7 +67,7 @@ button, a {
 button {
   border: none;
   background-color: transparent;
-  cursor: 11;
+  cursor: pointer;
 }
 
 a {
