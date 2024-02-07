@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html
+  head
+    title Frontend Mentor Challenges
+    link(rel="icon", href="https://camo.githubusercontent.com/b854bd306339cecb7d468c07f4cf425546993b4706157712f216dc5068a96e60/68747470733a2f2f61737365742e6272616e6466657463682e696f2f69642d37504a7a6359752f6964446b735157474e792e6a706567")
+    link(rel="stylesheet", href="style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Roboto:wght@400;500;700&display=swap", rel="stylesheet")
+  body
+    main
+      h1 Frontend Mentor's Solutions 
+      h2 Collection of all my Frontend Mentor challenge solutions. 
+      div(class="grid-container")
+        each project in projects
+          a(href=`https://itsdevdeepak.github.io/frontendmentor/${project.name}`)
+            div(class=project-item)
+                div(class="project-item")
+                  img(class="project-image", src=project.imageUrl, alt=project.name)
+                  p(class="project-name")=project.name.replaceAll("-", " ")

@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+button, a {
+  font: inherit;
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  max-width: 90%;
+  margin: 4rem 0;
+  margin-inline: auto;
+  
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.9rem;
+  }
+
+}
+
+.grid-container {
+  margin-top: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+  flex-wrap: wrap;
+
+  @media (min-width:700px) {
+    flex-direction: row;
+  }
+}
+
+.project-item {
+  border: 1.8px solid rgb(79, 76, 76);
+  border-radius: 13px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 420px;
+  p {
+    padding: 1.4rem 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  :hover {
+    background: #f1f1f1;
+  }
+}
+
